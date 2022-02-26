@@ -1,2 +1,2 @@
-# paveltitov16-JSFEPRESCHOOL
-Private repository for @paveltitov16
+## Deploy ##
+https://paveltitov16.github.io/Photographer-s-portfolio/portfolio/
