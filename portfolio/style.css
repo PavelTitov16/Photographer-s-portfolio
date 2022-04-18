@@ -432,6 +432,8 @@ h3 {
 }
 .video {
     width: 100%;
+    max-width: 100%;
+    object-fit: contain;
     height: auto;
     border: 1px solid var(--color-section);
     border-bottom: 0;
@@ -985,11 +987,10 @@ h3 {
     padding-top: 50px;
 }
 
-.video {
-    background-image: url(./assets/img/video-adaptive.jpg);
-    height: 418px;
-    width: 100%;
+.poster {
+    background-image: url("./assets/img/video-adaptive.jpg");
 }
+
 #video_id {
     margin-bottom: 50px;
 }
