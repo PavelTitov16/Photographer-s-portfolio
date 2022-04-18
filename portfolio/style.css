@@ -73,6 +73,7 @@ body {
     background-color: var(--color-base);
 }
 
+/* Header */
 .header-container {
     background-color: var(--color-transparent);
     position: fixed;
@@ -172,7 +173,7 @@ body {
     display: none;
 }
 
-/*Switch Theme*/
+/* Switch Theme */
 .switch-button {
     background: transparent;
     filter: invert(7%) sepia(33%) saturate(299%) hue-rotate(338deg) brightness(102%) contrast(102%);
@@ -196,7 +197,9 @@ body {
 .switch-button.light:hover {
     filter: invert(77%) sepia(11%) saturate(827%) hue-rotate(7deg) brightness(89%) contrast(91%);
 }
+/* Header */
 
+/* Hero section */
 .hero-container {
     background-image: url(./assets/img/bg.jpg);
     background-position: center;
@@ -253,7 +256,9 @@ body {
 .hire:hover {
     color: var(--color-text);
 }
+/* Hero section */
 
+/* Skills section */
 .section-title {
     background-color: var(--color-base);
     font-family: 'Merriweather', serif;
@@ -305,7 +310,9 @@ h3 {
     line-height: 40px;
     text-align: center;
 }
+/* Skills section */
 
+/* Portfolio section */
 .season-buttons {
     display: flex;
     justify-content: center;
@@ -406,41 +413,163 @@ h3 {
     width: 450px;
     height: 560px;
 }
+/* Portfolio section */
 
+/* Video */
 #video_id {
     margin-bottom: 60px;
 }
+
+.player {
+    position: relative;
+    max-width: 1440px;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 .video {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-section);
+    border-bottom: 0;
+}
+.poster {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
     background-image: url("./assets/img/video-player.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    max-width: 1400px;
-    height: 705px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-size: cover;
+}
+.poster.active {
+    display: none;
 }
 .button_3 {
+    position: absolute;
+    z-index: 3;
     background-image: url("./assets/svg/Play_hover.svg");
     background-color: transparent;
     width: 130px;
     height: 130px;
     background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
+    background-size: contain;
     transition: 0.5s;
-    background-position: 0 0;
+    background-position: center center;
     border: 0;
 }
 .button_3:hover {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
-.player {
-    width: 150px;
-    height: 150px;
+.button_3.active {
+    display: none;
 }
+/* Video */
 
+/* Controls */
+.controls {
+    background-color: var(--color-base);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid var(--color-section);
+    border-top: 0;
+    height: 60px;
+    width: 100%;
+    padding: 20px;
+}
+.play_button {
+    width: 40px;
+    height: 40px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.play_button:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+.play {
+    background-image: url(./assets/svg/play.svg);
+}
+.pause {
+    background-image: url(./assets/svg/pause.svg);
+}
+.progress {
+    background: linear-gradient(to right, var(--color-section) 0%, var(--color-section) 0%, var(--color-text) 0%, var(--color-text) 100%);
+    width: 70%;
+    height: 10px;
+    outline: none;
+    border: solid 2px var(--color-section);
+    border-radius: 8px;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+.progress::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: var(--color-section);
+}
+.volume_button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.volume_button:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+.volume_on {
+    background-image: url(./assets/svg/volume.svg);
+}
+.mute {
+    background-image: url(./assets/svg/mute.svg);
+}
+.volume {
+    display:inline-block;
+    background: linear-gradient(to right, var(--color-section) 0%, var(--color-section) 30%, var(--color-text) 30%, var(--color-text) 100%);
+    cursor:pointer;
+    width: calc(20% - 40px);
+    height: 10px;
+    outline: none;
+    border: solid 2px var(--color-section);
+    border-radius: 8px;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+.volume::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: var(--color-section);
+}
+.fullscreen {
+    background-image: url(./assets/svg/fullScreen.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    filter: invert(80%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+/* Controls */
+
+/* Price section */
 .section-price {
     padding-bottom: 100px;
     background: var(--color-base);
@@ -499,7 +628,9 @@ h3 {
 #order {
     margin-top: 20px;
 }
+/* Price section */
 
+/* Contact section */
 .contact-container {
     background-image: url(./assets/img/contacts.jpg);
     background-size: auto 700px;
@@ -617,7 +748,9 @@ textarea {
 :focus::placeholder {
     color: transparent;
 }
+/* Contact section */
 
+/* Footer */
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -672,6 +805,7 @@ textarea {
 #rss {
     padding-left: 27px;
 }
+/* Footer */
 
 /*Media Queries*/
 
@@ -1004,4 +1138,3 @@ textarea {
     margin-right: 25px;
 }
 }
-
