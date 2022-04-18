@@ -1119,6 +1119,21 @@ textarea {
 #order {
     margin-bottom: 40px;
 }
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100px;
+}
+
+.progress {
+    width: 85%;
+}
+
+.volume {
+    width: 70%;
+}
 }
 
 @media (max-width: 450px) {
